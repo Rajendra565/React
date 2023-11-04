@@ -36,10 +36,11 @@
 .card {
   padding: 2em;
 }
+Card{
+ margin-bottom: 10px;
+}
+
 
 .read-the-docs {
   color: #888;
-}
-button{
-  margin: 10px;
 }

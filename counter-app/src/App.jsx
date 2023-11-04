@@ -3,49 +3,53 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
- let [counter,setcounter]=useState(0);
+  let [counter,setCounter]=useState(0);
+ let [Color,setColor]=useState("red");
 
-
-
- let addvalue=()=>{
-   if(counter>=5){
-    alert('your value is mixmum 5')
-   }
-   else{
-     counter=counter + 1;
-    setcounter(counter);
-   }
   
 
+  let addnumber=()=>{
+    if(counter>=10){
+      alert("you value is 10 ")
+    }
+    else{
+       counter=counter+1;
+    setCounter(counter)
+    }
    
-  
- }
- let removevalue=()=>{
-
-  if(counter<=0){
-    alert("Your value is 0");
   }
-  else{
-    counter=counter-1;
-    setcounter(counter);
-  }
-
+  let Removenumber=()=>{
+    if(counter<=0){
+      alert("please add value")
+    }
+    else{
+       counter=counter-1;
+    setCounter(counter)
     
-  
-  
- }
+    }
+   
+  }
+  let style={
+    color:{Color},
+    
+  };
+  let redcolor=()=>{
+    setColor("red")
+  }
+  let greencolor=()=>{
+    setColor("green")
+  }
 
   return (
     <>
-      <h1>Chai Aur Code  {counter}</h1>
-      <h2>Counter value: {counter}</h2>
-
-
-
-      <button onClick={addvalue}>Add value</button>
-      <button onClick={removevalue}>Remove value</button>
-
-      <footer> footer: {counter}</footer>
+    <h1>Hello world</h1>
+    <p>Counter {counter}</p>
+     <button style={style} onClick={addnumber}>Add</button>
+     <button onClick={Removenumber}>Remove {counter}</button>
+     <footer>This is footer{counter}</footer>
+     <button onClick={redcolor}>red</button>
+     <button onClick={greencolor}>green</button>
+     
     </>
   )
 }
