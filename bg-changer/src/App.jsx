@@ -13,6 +13,7 @@ function App() {
       <button onClick={()=>setColor("green")} className="p-3 rounded-full border" style={{backgroundColor:"green"}}> green</button>
       <button onClick={()=>setColor("blue")} className="p-3 rounded-full border " style={{backgroundColor:"blue"}}> blue</button>
       <button onClick={()=>setColor("olive")} className="p-3 rounded-full border" style={{backgroundColor:"olive"}}> olive</button>
+      <button onClick={()=>setColor("white")} className="p-3 rounded-full border" style={{backgroundColor:"white"}}> white</button>
      </div>
 
      </div>
