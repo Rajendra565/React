@@ -41,6 +41,8 @@ const handletochange=(event)=>{
      <div className="container">
       <p className="fs-1 ">Text summary</p>
       <p className="fs-0.5">{text.split([" "]).length-1} word {text.length} characters</p>
+      <h1>perview</h1>
+      <p>{text}</p>
      </div>
     </>
   );
