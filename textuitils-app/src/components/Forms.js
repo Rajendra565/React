@@ -13,6 +13,10 @@ const handletoLowercase=()=>{
 const handletochange=(event)=>{
   setText(event.target.value)
 }
+const handletoclear=()=>{
+  let newText="";
+  setText(newText)
+}
   const [text,setText]=useState("");
   const [length,setlength]=useState(0);
   
@@ -37,6 +41,7 @@ const handletochange=(event)=>{
       <p>finding the length:{text.length}</p>
       <button className="btn btn-primary mx-3" onClick={handletoUpercase}>Click to uppercase</button>
       <button className="btn btn-primary mx-3" onClick={handletoLowercase}>Click to Lowercase</button>
+      <button className="btn btn-primary mx-3" onClick={handletoclear}>Clear text</button>
       
      
      </div>
@@ -44,7 +49,7 @@ const handletochange=(event)=>{
       <p className="fs-1 ">Text summary</p>
       <p className="fs-0.5"><b>{text.split([" "]).length-1}</b> word <b> {text.length}</b> characters</p>
       <h2>perview</h2>
-      <p>{text}</p>
+      <pre>{text}</pre>
      </div>
     </>
   );
