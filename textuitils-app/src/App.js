@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Forms from './components/Forms';
 
 function App() {
-  return (
+   return (
    <>
   <Navbar title="Text Uitils"/>
   <div className="container my-4">
@@ -12,6 +12,7 @@ function App() {
   </div>
    </>
   );
+ 
 }
 
 export default App;

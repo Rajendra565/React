@@ -40,6 +40,11 @@ function Navbar({title}) {
     </div>
   </div>
 </nav>
+<h1>{title}</h1>
+
+
+
+
 
 
 
