@@ -1,6 +1,8 @@
 import React,{useState} from "react";
 
 
+
+
 function Forms(props) {
 const handletoUpercase=()=>{
   setText(text.toUpperCase())
@@ -9,6 +11,14 @@ const handletoLowercase=()=>{
   setText(text.toLowerCase())
 }
 
+const headletolisten=()=>{
+  const voice=new SpeechSynthesisUtterance();
+
+
+    voice.text=document.querySelector('textarea').value;
+    window.speechSynthesis.speak(voice)
+
+}
 
 const handletochange=(event)=>{
   setText(event.target.value)
@@ -23,6 +33,7 @@ const handletocopy=()=>{
   navigator.clipboard.writeText(text.value);
   
 }
+
   const [text,setText]=useState("");
   const [length,setlength]=useState(0);
   
@@ -39,7 +50,7 @@ const handletocopy=()=>{
       <h2 className={`text-${props.mode==="light"?'dark':'light'}`}>{props.heading}</h2>
       
         <textarea
-          className={`form-control bg-${props.mode} text-${props.mode==="light"?'dark':'light'}`}
+          className={`form-control bg-${props.mode} text-${props.mode==="light"?'dark':'light'} `}
           id="exampleFormControlTextarea1"
           rows="8"
           value={text}
@@ -53,6 +64,7 @@ const handletocopy=()=>{
       <button className={`btn border-${props.mode==="light"?'dark':'light'} btn-bg-${props.mode} m-2 text-${props.mode==="light"?'dark':'light'}`} onClick={handletoLowercase}>Click to Lowercase <i className="fa-solid fa-wand-sparkles p-lg-2"></i></button>
       <button className={`btn border-${props.mode==="light"?'dark':'light'} btn-bg-${props.mode} m-2 text-${props.mode==="light"?'dark':'light'}`} onClick={handletocopy}>Click to copy <i className="fa-solid fa-copy p-lg-2"></i></button>
       <button className={`btn border-${props.mode==="light"?'dark':'light'} btn-bg-${props.mode} m-2 text-${props.mode==="light"?'dark':'light'}`} onClick={handletoclear}>Clear text<i className="fa-solid fa-trash p-lg-2"></i></button>
+      <button className={`btn border-${props.mode==="light"?'dark':'light'} btn-bg-${props.mode} m-2 text-${props.mode==="light"?'dark':'light'}`} onClick={headletolisten}><i class="fa-solid fa-play px-1"></i>Listen</button>
        </div>
       </div>
       <div className="container bg-{props.mode}">
