@@ -19,8 +19,8 @@ function App() {
     if(numAllowed){
       str += "0123456789"
     }
-    else if(charAllowed){
-      str += "~`!@#$%^&*(){}[]"
+    if(charAllowed){
+      str += '~`!@#$%^&*(){}[]'
     }
     
 
@@ -29,15 +29,15 @@ function App() {
       pass +=str.charAt(char)
       
     }
-    console.log(pass)
+    // console.log(pass)
     setpassword(pass)
 
-  },[lenght,numAllowed,charAllowed,setpassword])
+  },[lenght,numAllowed,charAllowed,password])
   
 
   const copytheclipborder=useCallback(()=>{
     window.navigator.clipboard.writeText(password)
-  },[])
+  },[password])
 
   useEffect(()=>{
     passwordgenerator()
@@ -48,7 +48,7 @@ function App() {
       <div className="w-full max-w-md bg-gray-800 m-auto px-3 py-2 ">
             <h2 className=' text-white text-4xl my-3'>Password Generrator</h2>
         <div className="w-100 h-fit px-5 py-4 flex rounded-lg ">
-            <input type="text" placeholder='Enter password' value={setpassword("rajendra")} className=' w-full p-2 rounded-sm outline-none'
+            <input type="text" placeholder='Enter password' value={setpassword("rajendra")} className=' w-full p-2 rounded-sm outline-none' readOnly
               ref={passwordcopy}
             />
             <button className='bg-blue-700 px-3 py-2.3 font-bold rounded-sm text-white shrink-0' onClick={copytheclipborder}>copy</button>
