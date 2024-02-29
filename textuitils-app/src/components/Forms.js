@@ -10,6 +10,11 @@ const handletoUpercase=()=>{
 const handletoLowercase=()=>{
   setText(text.toLowerCase())
 }
+const handletocapitalize=()=>{
+  setText(text[0].toUpperCase()+text.slice(1).toLowerCase())
+}
+
+
 
 const headletolisten=()=>{
   const voice=new SpeechSynthesisUtterance();
@@ -33,6 +38,8 @@ const handletocopy=()=>{
   navigator.clipboard.writeText(text.value);
   
 }
+
+
 
   const [text,setText]=useState("");
   const [length,setlength]=useState(0);
@@ -62,6 +69,9 @@ const handletocopy=()=>{
       
       <button className={`btn border-${props.mode==="light"?'dark':'light'} btn-bg-${props.mode} m-2 text-${props.mode==="light"?'dark':'light'}`} onClick={handletoUpercase}>Click to uppercase <i className="fa-solid fa-wand-sparkles p-lg-2" /></button>
       <button className={`btn border-${props.mode==="light"?'dark':'light'} btn-bg-${props.mode} m-2 text-${props.mode==="light"?'dark':'light'}`} onClick={handletoLowercase}>Click to Lowercase <i className="fa-solid fa-wand-sparkles p-lg-2"></i></button>
+   
+      <button className={`btn border-${props.mode==="light"?'dark':'light'} btn-bg-${props.mode} m-2 text-${props.mode==="light"?'dark':'light'}`} onClick={handletocapitalize}>Click to capitalize <i className="fa-solid fa-wand-sparkles p-lg-2"></i></button>
+
       <button className={`btn border-${props.mode==="light"?'dark':'light'} btn-bg-${props.mode} m-2 text-${props.mode==="light"?'dark':'light'}`} onClick={handletocopy}>Click to copy <i className="fa-solid fa-copy p-lg-2"></i></button>
       <button className={`btn border-${props.mode==="light"?'dark':'light'} btn-bg-${props.mode} m-2 text-${props.mode==="light"?'dark':'light'}`} onClick={handletoclear}>Clear text<i className="fa-solid fa-trash p-lg-2"></i></button>
       <button className={`btn border-${props.mode==="light"?'dark':'light'} btn-bg-${props.mode} m-2 text-${props.mode==="light"?'dark':'light'}`} onClick={headletolisten}><i class="fa-solid fa-play px-1"></i>Listen</button>
