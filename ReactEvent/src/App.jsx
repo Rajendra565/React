@@ -1,23 +1,16 @@
-
-import './App.css'
-import AppName from './component/AppName'
-import List from './component/List'
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import AppName from "./Components/AppName";
+import FoodList from "./Components/FoodList";
 
 function App() {
-  const listItem=['Apple','pal',"hadlkjf"]
- 
-
+  const list=["dal","vagetable","Roti","Salad","Milk","Ghee"]
   return (
-    <>
-    <div className=" ">
-    <AppName/>
-    {listItem.map((val)=>{
-
-    <List ItemList={val}/>
-    })}
-    </div>
-    </>
-  )
+   <>
+    <AppName />
+    <FoodList listItems={list}/>
+   </>
+  );
 }
 
-export default App
+export default App;
