@@ -25,7 +25,7 @@ function App() {
     <>
     <div className=" d-flex flex-column gap-3">
     <AppName></AppName>
-    <InputBox todoitem={items}></InputBox>
+    <InputBox todoitem={}></InputBox>
     
     </div>
 
