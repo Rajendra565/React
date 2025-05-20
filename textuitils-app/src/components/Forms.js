@@ -32,6 +32,7 @@ const handletoclear=()=>{
   let newText="";
   setText(newText)
 }
+
 const handletocopy=()=>{
   let text=document.querySelector('#exampleFormControlTextarea1');
   text.select();

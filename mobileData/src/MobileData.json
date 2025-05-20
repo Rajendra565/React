@@ -1,0 +1,26 @@
+[
+  {"id":1,
+  "name":"Iphone 12",
+  "image":"https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-max-1.jpg"
+  },
+  {
+    "id":2,
+  "name":"Iphone 12",
+  "image":"https://i.guim.co.uk/img/media/18badfc0b64b09f917fd14bbe47d73fd92feeb27/189_335_5080_3048/master/5080.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=1562112c7a64da36ae0a5e75075a0d12"
+  },
+  {
+    "id":3,
+  "name":"Iphone 12",
+  "image":"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRX0fFET4aS0vW91IVTG-gMwKF2HhQXSgSzZXNwU7nwPNpCPrbw0qGwWenRLjaADPy3xfTaHwHuiiVh1_4yW6vFMbLDWtkZeiXOlDJvieFPVI4WdmZWxVVu3EA"
+  },
+  {
+    "id":4,
+  "name":"Iphone 12",
+  "image":"https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-max-1.jpg"
+  },
+  {
+    "id":5,
+  "name":"Iphone 12",
+  "image":"https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-max-1.jpg"
+  }
+]

@@ -15,14 +15,9 @@ function App() {
     <ul className="list-group">
     {fooditems.map((val)=>{
       return <li key={val} className="list-group-item ">{val}</li>
-      
-
     })}
-  
-  
 </ul>
 </div> 
-
    </>
   )
 }

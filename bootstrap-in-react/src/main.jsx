@@ -5,7 +5,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App titel={3} name="badatya" 
+    <App titel={3} name="Navbar" 
      />
     {/* <App /> */}
   </React.StrictMode>,
